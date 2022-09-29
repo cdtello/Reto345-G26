@@ -30,26 +30,6 @@ public class EmpleadoController {
         this.empleadoService = empleadoService;
     }
 
-    @GetMapping("/test")
-    public String getTest(){
-        return "Hola test";
-    }
-
-    @GetMapping("/hola")
-    public String getHola(){
-        return "Hola hola";
-    }
-
-    @GetMapping("/mundo")
-    public String getMundo(){
-        return "mundo test";
-    }
-
-    @GetMapping("/adios")
-    public String getAdios(){
-        return "Adios test";
-    }
-
     @GetMapping
     public ResponseEntity<List<Empleado>> getEmpleados(){
         return new ResponseEntity<List<Empleado>>(this.empleadoService.getListEmpleados(), HttpStatus.OK);
